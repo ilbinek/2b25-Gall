@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="tbd_mortar">
+    <Package name="Translation">
+        <Key ID="STR_TBD_VASILEK">
+            <English>2B9 Vasilek</English>
+            <Czech>2B9 Vasilek</Czech>
+        </Key>
+    </Package>
+</Project>
