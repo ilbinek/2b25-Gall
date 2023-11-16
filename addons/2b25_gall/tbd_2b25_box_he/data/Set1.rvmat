@@ -22,7 +22,7 @@ VertexShaderID = "Super";
 
 class Stage1
 {
-	texture="x\tbd\addons\tbd_2B25\data\Set2_nohq.paa";
+	texture="2b25box\data\Set1_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -58,7 +58,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="x\tbd\addons\tbd_2B25\data\Set2_as.paa";
+	texture="2b25box\data\Set1_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -70,7 +70,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="x\tbd\addons\tbd_2B25\data\Set2_smdi.paa";
+	texture="2b25box\data\Set1_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

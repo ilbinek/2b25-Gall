@@ -1,12 +1,12 @@
 class CfgPatches
 {
-	class 2b25
+	class 2B25
 	{
 		addonRootClass = "A3_Armor_F_Beta";
 		requiredAddons[] = {"A3_Armor_F_Beta","A3_Data_F","A3_Weapons_F_Gamma"};
 		requiredVersion = 0.1;
 		weapons[] = {""};
-		units[] = {"2b25"};
+		units[] = {"2B25"};
 	};
 };
 
@@ -34,75 +34,99 @@ class rhs_2b14_82mm_Base: StaticMortar
 class rhsgref_ins_2b14: rhs_2b14_82mm_Base
 {};
 
-class 2b25: rhsgref_ins_2b14
+class 2B25: rhsgref_ins_2b14
 	{
         scope = 2;
 		scopeCurator = 2;
         //mapSize = 3;
         //icon = "iconObject_2x2"; 
-		model = "2b25\2b25"; 
-		displayName = "2b25";
+		model = "QPATHTOF(2b25-Gall\tbd_mortar_table);"; 
+		displayName = "2B25";
 
-      
-		
-        class AnimationSources
-		{
-		class rightwheel_source
-			{
-				source = user; // "user" = custom source = not controlled by some engine value
-				initPhase = 0; // Initial value of animations based on this source
-				animPeriod = 3; // Coefficient for duration of change of this animation
-				//sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
-            };
-         class leftwheel_source
-			{
-				source = user; // "user" = custom source = not controlled by some engine value
-				initPhase = 0; // Initial value of animations based on this source
-				animPeriod = 3; // Coefficient for duration of change of this animation
-				//sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
-            };   
-			class centralleg_source
-			{
-				source = user; // "user" = custom source = not controlled by some engine value
-				initPhase = 0; // Initial value of animations based on this source
-				animPeriod = 3; // Coefficient for duration of change of this animation
-				//sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
-            }; 
+        textSingular = $STR_A3_NAMESOUND_VEH_STATIC_MORTAR_S;
+        textPlural = $STR_A3_NAMESOUND_VEH_STATIC_MORTAR_P;
+        nameSound = "veh_static_mortar_s";
+       _generalMacro = "StaticMortar";
+        threat[] = {0.8,0.8,0.1};
+        accuracy = 0.12;
+        cost = 10000;
+        getInAction = "GetInLow";
+        getOutAction = "GetOutLow";
+        ace_artillerytables_showGunLaying = 2;
+        epeImpulseDamageCoef = 8;
+    driverOpticsModel = "\A3\weapons_f\reticle\optics_empty";
+    selectionClan = "clan";
+    selectionDashboard = "podsvit pristroju";
+    selectionShowDamage = "poskozeni";
+    selectionBackLights = "light_back";
+    bounding = "usti hlavne";
+    alphaTracks = 0.7;
+    textureTrackWheel = 0;
+    selectionLeftOffset = "";
+    selectionRightOffset = "";
+    memoryPointTrack1L = "";
+    memoryPointTrack1R = "";
+    memoryPointTrack2L = "";
+    memoryPointTrack2R = "";
+    tracksSpeed = 1;
+    waterLeakiness = 100;
+    selectionFireAnim = "";
+    fireDustEffect = "FDustEffects";
+    memoryPointCargoLight = "cargo light";
+    driverCanSee = "1 + 2 + 4 + 8 + 32";
+    commanderCanSee = "1 + 2 + 4 + 8 + 32";
+    gunnerHasFlares = 0;
+    damperSize = 1.4;
+    damperForce = 0.8;
+    attenuationEffectType = "OpenCarAttenuation";
+    getInRadius = 3.5;
+    secondaryExplosion = -1;
+    fuelExplosionPower = 0;
+    fuelCapacity = 0;
+    irScanRangeMin = 0;
+    irScanRangeMax = 0;
+    irScanToEyeFactor = 1;
+    allowTabLock = 0;
+    irTarget = 0;
+    laserTarget = 0;
+    armor = 24;
+    armorStructural = 1;
+    explosionShielding = 1;
+    minTotalDamageThreshold = 0.01;
+    crewCrashProtection = 1;
+    crewExplosionProtection = 0;
+    steerAheadSimul = 0.4;
+    steerAheadPlan = 0.6;
+    predictTurnSimul = 1.2;
+    predictTurnPlan = 1.8;
+    ejectDeadDriver = 1;
+    ejectDeadCargo = 1;
+    hasDriver = 0;
+    nightVision = 0;
+    driverAction = "ManActCargo";
+    driverInAction = "ManActCargo";
+    simulation = "tankX";
+    occludeSoundsWhenIn = 1;
+    obstructSoundsWhenIn = 1;
+    formationX = 20;
+    formationZ = 30;
+    precision = 1;
+    brakeDistance = 0;
+    turnCoef = 0;
+    maxSpeed = 0;
+    canFloat = 0;
+    type = 1;
+    camouflage = 1;
+    audible = 1;
+    sensitivityEar = 0.125;
+    sensitivity = 1.75;
+    hideProxyInCombat = 0;
+    transportMaxMagazines = 0;
+    transportMaxWeapons = 0;
+    numberPhysicalWheels = 0;
+    GhostPreview = "M2StaticMGPreview";
 
-			class rightleg_source
-			{
-				source = user; // "user" = custom source = not controlled by some engine value
-				initPhase = 0; // Initial value of animations based on this source
-				animPeriod = 1; // Coefficient for duration of change of this animation
-                minValue=0.0;
-                maxValue=7.0;
-				//sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
-            }; 
-
-			//class otochlaven
-			//{
-			//	source = animationSourceGun; // "user" = custom source = not controlled by some engine value
-			//	initPhase = 0; // Initial value of animations based on this source
-			//	animPeriod = 3; // Coefficient for duration of change of this animation
-				//sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
-            //}; 
-			//class otocvez
-			//{
-			//	source = animationSourceBody; // "user" = custom source = not controlled by some engine value
-			//	initPhase = 0; // Initial value of animations based on this source
-			//	animPeriod = 3; // Coefficient for duration of change of this animation
-				//sound = "GenericDoorsSound"; /// Selects sound class from CfgAnimationSourceSounds that is going to be used for sounds of doors
-          //  }; 
-
-
-
-           
-
-
-
-
-
-		};																																				
+																																			
 
 		class Turrets
     {
@@ -140,10 +164,10 @@ class 2b25: rhsgref_ins_2b14
             maxCamElev = 35;
             initElev = 0;
             initTurn = 0;
-            minElev = 0;
-            maxElev = 55;
-            minTurn = -30;
-            maxTurn = 30;
+            minElev = -15;
+            maxElev = 30;
+            minTurn = -180;
+            maxTurn = 180;
             usePiP = 2;
             disableSoundAttenuation = 1;
             stabilizedInAxes = 0;
