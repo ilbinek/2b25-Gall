@@ -22,7 +22,7 @@ VertexShaderID = "Super";
 
 class Stage1
 {
-	texture="2b25mine\data\iron_nohq.paa";
+	texture="x\tbd\addons\2b25_gall\tbd_2b25_shell_he\data\iron_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -58,7 +58,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="2b25mine\data\iron_as.paa";
+	texture="x\tbd\addons\2b25_gall\tbd_2b25_shell_he\data\iron_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -70,7 +70,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="2b25mine\data\iron_smdi.paa";
+	texture="x\tbd\addons\2b25_gall\tbd_2b25_shell_he\data\iron_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
