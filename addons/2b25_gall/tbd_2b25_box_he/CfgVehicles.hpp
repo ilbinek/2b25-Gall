@@ -1,12 +1,12 @@
 class CfgVehicles {
     class NATO_Box_Base;
 
-    class TBD_MORTAR_82mm_BOX_HE : NATO_Box_Base {
+    class TBD_2B25_BOX_HE : NATO_Box_Base {
         scope = 2;
-		author = "TBD Team";
-        displayName = "$STR_TBD_MORTAR_82MM_BOX_HE";
-        model = QPATHTOF(TBD_MORTAR_82mm_BOX_HE\TBD_MORTAR_82mm_BOX_HE);
-        editorPreview = QPATHTOF(TBD_MORTAR_82mm_BOX_HE\data\preview.paa);
+        author = "TBD Team";
+        displayName = "$STR_TBD_2B25_BOX_HE";
+        model = QPATHTOF(TBD_2B25_BOX_HE\TBD_2B25_BOX_HE);
+        editorPreview = QPATHTOF(TBD_2B25_BOX_HE\data\preview.paa);
         ace_cargo_size = 0.5;
         ace_cargo_canLoad = 1;
         transportMaxWeapons = 0;
@@ -40,11 +40,10 @@ class CfgVehicles {
                 initPhase = 0;
                 animPeriod = 1;
             };
-        
         };
 
-		 class ACE_Actions {
-            ///////////////////// Roof /////////////////////
+        class ACE_Actions {
+            ///////////////////// Lid /////////////////////
             class openBox {
                 displayName = "$STR_TBD_MORTAR_82MM_OPEN";
                 condition = QUOTE([ARR_1(_target)] call FUNC(canOpen));
@@ -63,8 +62,8 @@ class CfgVehicles {
                 selection = "int_box_close";
             };
 
+            ///////////////////// Take mines /////////////////////
 
-              ///////////////////// Take mines /////////////////////
             class ACE_Round_1_Take {
                 displayName = "$STR_TBD_MORTAR_82MM_TAKE_SHELL";
                 distance = 2;
@@ -94,104 +93,36 @@ class CfgVehicles {
                 selection = "int_mine_4"; 
             };
 
-
             ///////////////////// Put /////////////////////
-
             class ACE_Round_1_Put {
-                displayName = "$STR_TBD_MORTAR_82MM_STORE";
+                displayName = "$STR_TBD_MORTAR_82MM_STORE_HE_SHELL";
                 distance = 2;
                 showDisabled=0;
 				exceptions[]={};
 				priority=5;
-                condition = QUOTE([ARR_2(_target,1) ] call FUNC(canReturn));
-                selection = "int_mine_1";
-
-                class ACE_Round_1_Put_HE {
-                    displayName = "$STR_TBD_MORTAR_82MM_STORE_HE_SHELL";
-                    condition = QUOTE([ARR_3(_target,1,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(canLoadMine));
-                    statement = QUOTE([ARR_3(_target,1,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(loadMine));
-                    showDisabled=0;
-					exceptions[]={};
-                };
-
+                condition = QUOTE([ARR_3(_target,1,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
+                statement = QUOTE([ARR_3(_target,1,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
+                selection = "int_mine_1"; 
             };
 
             class ACE_Round_2_Put {
-                displayName = "$STR_TBD_MORTAR_82MM_STORE";
-                distance = 2;
-                showDisabled=0;
-				exceptions[]={};
-				priority=5;
-                condition = QUOTE([ARR_2(_target,2) ] call FUNC(canReturn));
-                selection = "int_mine_2";
-
-                class ACE_Round_2_Put_HE {
-                    displayName = "$STR_TBD_MORTAR_82MM_STORE_HE_SHELL";
-                    condition = QUOTE([ARR_3(_target,2,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(canLoadMine));
-                    statement = QUOTE([ARR_3(_target,2,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(loadMine));
-                    showDisabled=0;
-					exceptions[]={};
-                };
+                condition = QUOTE([ARR_3(_target,2,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
+                statement = QUOTE([ARR_3(_target,2,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
+                selection = "int_mine_2"; 
             };
 
             class ACE_Round_3_Put {
-                displayName = "$STR_TBD_MORTAR_82MM_STORE";
-                distance = 2;
-                showDisabled=0;
-				exceptions[]={};
-				priority=5;
-                condition = QUOTE([ARR_2(_target,3) ] call FUNC(canReturn));
-                selection = "int_mine_3";
-
-                class ACE_Round_3_Put_HE {
-                    displayName = "$STR_TBD_MORTAR_82MM_STORE_HE_SHELL";
-                    condition = QUOTE([ARR_3(_target,3,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(canLoadMine));
-                    statement = QUOTE([ARR_3(_target,3,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(loadMine));
-                    showDisabled=0;
-					exceptions[]={};
-                };
-
+                condition = QUOTE([ARR_3(_target,3,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
+                statement = QUOTE([ARR_3(_target,3,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
+                selection = "int_mine_3"; 
             };
 
             class ACE_Round_4_Put {
-                displayName = "$STR_TBD_MORTAR_82MM_STORE";
-                distance = 2;
-                showDisabled=0;
-				exceptions[]={};
-				priority=5;
-                condition = QUOTE([ARR_2(_target,4) ] call FUNC(canReturn));
-                selection = "int_mine_4";
-
-                class ACE_Round_4_Put_HE {
-                    displayName = "$STR_TBD_MORTAR_82MM_STORE_HE_SHELL";
-                    condition = QUOTE([ARR_3(_target,4,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(canLoadMine));
-                    statement = QUOTE([ARR_3(_target,4,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(loadMine));
-                    showDisabled=0;
-					exceptions[]={};
-                };
-
+                condition = QUOTE([ARR_3(_target,4,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
+                statement = QUOTE([ARR_3(_target,4,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
+                selection = "int_mine_4"; 
             };
+        };
 
-            class ACE_Round_5_Put {
-                displayName = "$STR_TBD_MORTAR_82MM_STORE";
-                distance = 2;
-                showDisabled=0;
-				exceptions[]={};
-				priority=5;
-                condition = QUOTE([ARR_2(_target,5) ] call FUNC(canReturn));
-                selection = "int_mine_5";
-
-                class ACE_Round_5_Put_HE {
-                    displayName = "$STR_TBD_MORTAR_82MM_STORE_HE_SHELL";
-                    condition = QUOTE([ARR_3(_target,5,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(canLoadMine));
-                    statement = QUOTE([ARR_3(_target,5,QUOTE(QUOTE(TBD_MORTAR_82mm_HE)))] call FUNC(loadMine));
-                    showDisabled=0;
-					exceptions[]={};
-                };
-
-            
-            };
-		 };
     };
-
 };

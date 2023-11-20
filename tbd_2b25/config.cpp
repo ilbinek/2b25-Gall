@@ -40,7 +40,7 @@ class 2B25: rhsgref_ins_2b14
 		scopeCurator = 2;
         //mapSize = 3;
         //icon = "iconObject_2x2"; 
-		model = "QPATHTOF(2b25-Gall\tbd_mortar_table);"; 
+		model = QPATHTOF(2b25-Gall\2B25); 
 		displayName = "2B25";
 
         textSingular = $STR_A3_NAMESOUND_VEH_STATIC_MORTAR_S;

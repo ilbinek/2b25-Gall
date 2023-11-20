@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 2.04;
-        requiredAddons[] = {"cba_main", "ace_interact_menu"};
+        requiredAddons[] = {"cba_main", "ace_interact_menu", "tbd_mortars_main"};
     };
 };
 

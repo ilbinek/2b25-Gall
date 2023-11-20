@@ -5,19 +5,19 @@ class CfgMagazines {
 	class 32Rnd_155mm_Mo_shells: VehicleMagazine {};
 	class 8Rnd_82mm_Mo_shells: 32Rnd_155mm_Mo_shells {};
 
-	class TBD_MORTAR_82mm_spigot_HE: 8Rnd_82mm_Mo_shells {
+	class TBD_2B25_HE: 8Rnd_82mm_Mo_shells {
 		scope = 2;
 		scopeArsenal = 2;
-		author = "Ilbinek´s mom";
-		displayName = 82mm spigot shell;
+		author = "TBD Team";
 		displayNameShort = "TBD HE";
-		model = 2B25mine\2B25mine;
-		picture = 2B25mine\data\picture.paa);
-		descriptionShort = idk;
-		initSpeed = 211;
+		descriptionShort = QUOTE($STR_TBD_MORTAR_82MM_HE_SHELL_DESC);
 		mass = 70;
 		count = 1;
-		ammo = TBD_MORTAR_82mm_SPIGOT_SHELL_AMMO_HE;
+		ammo = QUOTE(TBD_MORTAR_82mm_SPIGOT_SHELL_AMMO_HE);
 		type = 256;
+		displayName = QUOTE($STR_TBD2B25_HE_SHELL);
+		picture = QPATHTOF(TBD_2B25_HE\data\icon.paa);
+		model = QPATHTOF(TBD_2B25_HE\TBD_2B25_HE);
+		initSpeed = 122;
 	};  
 };																																						

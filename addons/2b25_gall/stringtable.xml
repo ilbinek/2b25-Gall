@@ -5,5 +5,13 @@
             <English>2B9 Vasilek</English>
             <Czech>2B9 Vasilek</Czech>
         </Key>
+        <Key ID="STR_TBD2B25_HE_SHELL">
+            <English>82mm HE-Frag shell - Gall</English>
+            <Czech>82mm TŘÍSTIVÁ mina - Gall</Czech>
+        </Key>
+        <Key ID="STR_TBD_2B25_BOX_HE">
+            <English>82mm HE-Frag box - Gall</English>
+            <Czech>82mm TŘÍSTIVÉ miny - Gall</Czech>
+        </Key>
     </Package>
 </Project>
