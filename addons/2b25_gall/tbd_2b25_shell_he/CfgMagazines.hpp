@@ -13,7 +13,7 @@ class CfgMagazines {
 		descriptionShort = QUOTE($STR_TBD_MORTAR_82MM_HE_SHELL_DESC);
 		mass = 70;
 		count = 1;
-		ammo = QUOTE(TBD_MORTAR_82mm_SPIGOT_SHELL_AMMO_HE);
+		ammo = QUOTE(TBD_2B25_82mm_SHELL_AMMO_HE);
 		type = 256;
 		displayName = QUOTE($STR_TBD2B25_HE_SHELL);
 		picture = QPATHTOF(TBD_2B25_HE\data\icon.paa);
