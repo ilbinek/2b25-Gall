@@ -33,6 +33,7 @@ if (_box getVariable _m == 0) exitWith {};
 
 // Deterimne which classname to use and animate it out
 private _mineClass = QUOTE(TBD_2B25_HE);
+_box animate [format ["mine_he_%1_h", _nbr], 1, true];
 
 // Remove the mine from the box
 _box setVariable [_m, 0, true];

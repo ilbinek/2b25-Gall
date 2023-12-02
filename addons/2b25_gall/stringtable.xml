@@ -13,5 +13,9 @@
             <English>82mm HE-Frag box - Gall</English>
             <Czech>82mm TŘÍSTIVÉ miny - Gall</Czech>
         </Key>
+        <Key ID="STR_TBD_2B25">
+            <English>2b25 Gall</English>
+            <Czech>2b25 Gall</Czech>
+        </Key>
     </Package>
 </Project>

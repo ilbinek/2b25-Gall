@@ -105,19 +105,19 @@ class CfgVehicles {
                 selection = "int_mine_1"; 
             };
 
-            class ACE_Round_2_Put {
+            class ACE_Round_2_Put: ACE_Round_1_Put {
                 condition = QUOTE([ARR_3(_target,2,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
                 statement = QUOTE([ARR_3(_target,2,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
                 selection = "int_mine_2"; 
             };
 
-            class ACE_Round_3_Put {
+            class ACE_Round_3_Put: ACE_Round_1_Put {
                 condition = QUOTE([ARR_3(_target,3,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
                 statement = QUOTE([ARR_3(_target,3,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
                 selection = "int_mine_3"; 
             };
 
-            class ACE_Round_4_Put {
+            class ACE_Round_4_Put: ACE_Round_1_Put {
                 condition = QUOTE([ARR_3(_target,4,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(canLoadMine));
                 statement = QUOTE([ARR_3(_target,4,QUOTE(QUOTE(TBD_2B25_HE)))] call FUNC(loadMine));
                 selection = "int_mine_4"; 
