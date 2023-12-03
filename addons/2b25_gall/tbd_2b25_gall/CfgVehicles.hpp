@@ -11,7 +11,10 @@ class CfgVehicles {
     };
 
     class TBD_2B25_GALL : StaticMortar {
-        artilleryScanner = 1;
+        artilleryScanner = 0; // turn off artillery computer
+        ace_artillerytables_showRangetable = 1; // "fix" rangetables not showing up
+        ace_artillerytables_showGunLaying = 1;  // "fix" rangetables not showing up
+
         scope = 2;
         scopeCurator = 2;
         author = "TBD Team";
@@ -97,6 +100,43 @@ class CfgVehicles {
                 condition = "true";
                 statement = "_this call ace_mk6mortar_fnc_toggleMils";
                 exceptions[] = {};
+            };
+        };
+
+        class ACE_Actions {
+            class ACE_LoadRound {
+                selection = "usti hlavne";
+                distance = 2.5;
+                condition = "alive _target";
+                showDisabled = 1;
+                priority = 5;
+                displayName = "$STR_TBD_MORTAR_82MM_LOAD";
+                icon = QPATHTOEF(mortars_main,data\load.paa);
+
+                class ACE_LoadRound_HE {
+                    displayName = "$STR_TBD_MORTAR_82MM_HE_SHELL";
+                    icon = QPATHTOF(TBD_2B25_HE\data\icon.paa);
+                    condition = QUOTE([ARR_3(_target,0,QUOTE(QUOTE(TBD_2B25_HE)))] call EFUNC(mortars_main,checkCanLoadShell));
+                    statement = QUOTE([ARR_3(_target,0,QUOTE(QUOTE(TBD_2B25_HE)))] call EFUNC(mortars_main,loadShell));
+                    showDisabled = 0;
+                };
+            };
+
+            class ACE_UnloadRound {
+                selection = "usti hlavne";
+                distance = 2.5;
+                condition = "alive _target";
+                showDisabled = 1;
+                priority = 5;
+                displayName = "$STR_TBD_MORTAR_82MM_UNLOAD";
+                icon = QPATHTOEF(mortars_main,data\unload.paa);
+                class ACE_UnloadRound_HE {
+                    displayName = "$STR_TBD_MORTAR_82MM_HE_SHELL";
+                    icon = QPATHTOF(TBD_2B25_HE\data\icon.paa);
+                    condition = QUOTE([ARR_3(_target,0,QUOTE(QUOTE(TBD_2B25_HE)))] call EFUNC(mortars_main,checkCanUnloadShell));
+                    statement = QUOTE([ARR_4(_target,0,QUOTE(QUOTE(TBD_2B25_HE)),_player)] call EFUNC(mortars_main,unloadShell));
+                    showDisabled = 0;
+                };
             };
         };
     };
