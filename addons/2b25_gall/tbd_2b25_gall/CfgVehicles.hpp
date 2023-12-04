@@ -35,6 +35,21 @@ class CfgVehicles {
         accuracy = 0.8;
         EPEImpulseDamageCoef = 5;
 
+        class AnimationSources {
+
+            class magazine_1_source {
+                source = "user";  
+                initPhase = 1;
+                animPeriod = 1;
+            };
+            class magazine_2_source {
+                source = "user";  
+                initPhase = 1;
+                animPeriod = 1;
+            };
+        };
+
+
         class Turrets : Turrets {
             class MainTurret : MainTurret {
                 gunnerAction = "Mortar_Gunner";
