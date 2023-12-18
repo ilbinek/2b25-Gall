@@ -47,6 +47,11 @@ class CfgVehicles {
                 initPhase = 1;
                 animPeriod = 1;
             };
+            class tvojemamasource {
+                source = "user";  
+                initPhase = 1;
+                animPeriod = 1;
+            };
         };
 
 
@@ -69,7 +74,8 @@ class CfgVehicles {
                 discreteDistanceCameraPoint[] = {"eye"};
                 gunnerForceOptics = 0;
                 memoryPointGunnerOptics = "eye";
-                gunnerOpticsModel = "\A3\Weapons_F\acc\reticle_Mortar_01_F.p3d";
+                //gunnerOpticsModel = "\A3\Weapons_F\acc\reticle_Mortar_01_F.p3d";
+                gunnerOpticsModel = QPATHTOF(TBD_2B25_GALL\scope.p3d);
                 disableSoundAttenuation = 1;
                 class ViewOptics : ViewOptics {
                     initAngleX = 0;
@@ -88,7 +94,7 @@ class CfgVehicles {
                 magazines[] = {QUOTE(TBD_2B25_HE)};
                 ejectDeadGunner = 1;
                 usepip = 2;
-                turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
+               // turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery"; - nerealisticky mortar overlay, vypnut
                 discreteDistanceInitIndex = 0;
                 primaryGunner = 1;
                 maxHorizontalRotSpeed = 1.2;
