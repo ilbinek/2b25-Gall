@@ -13,6 +13,9 @@ class CfgWeapons {
 		displayName = "2B25 Mortar";
 		magazines[] = {QUOTE(TBD_2B25_HE)};
 		modes[] = {"Single"};
+		reloadSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",1,1,20};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons_static\Mortar\reload_mortar",1,1,20};
+		magazineReloadTime = 3;
 		class Single: Mode_SemiAuto {
 			displayName="Gall Mortar";
 			sounds[]=
@@ -60,6 +63,7 @@ class CfgWeapons {
 			midRangeProbab=0.0099999998;
 			maxRange=2;
 			maxRangeProbab=0.0099999998;
+			
 		};
 	};
 };

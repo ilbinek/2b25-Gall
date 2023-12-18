@@ -37,21 +37,14 @@ class CfgVehicles {
 
         class AnimationSources {
 
-            class magazine_1_source {
-                source = "user";  
-                initPhase = 1;
-                animPeriod = 1;
-            };
-            class magazine_2_source {
-                source = "user";  
-                initPhase = 1;
-                animPeriod = 1;
-            };
-            class tvojemamasource {
-                source = "user";  
-                initPhase = 1;
-                animPeriod = 1;
-            };
+        class RoundHideSource {
+        weapon = QUOTE(TBD_2B25_WEAPON);
+        selection = "round_selection";
+        source = "ammo";
+        type = "hide";
+        hideValue = 0;
+        unhideValue = 1;
+    };
         };
 
 
