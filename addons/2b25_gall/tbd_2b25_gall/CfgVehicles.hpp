@@ -89,8 +89,8 @@ class CfgVehicles {
                     maxFov = 0.14;
                     visionMode[] = {"Normal"};
                 };
-                minelev = -30;
-                maxelev = 13;
+                minelev = 0;
+                maxelev = 44;
                 magazines[] = {QUOTE(TBD_2B25_HE)};
                 ejectDeadGunner = 1;
                 usepip = 2;
