@@ -45,6 +45,14 @@ class CfgVehicles {
         hideValue = 0;
         unhideValue = 1;
     };
+
+        class Mamasource {
+        weapon = QUOTE(TBD_2B25_WEAPON);
+        selection = "round_selection";
+        source = "reloadMagazine";
+        //initPhase = 0;
+        animPeriod = 10;
+    };
         };
 
 
