@@ -50,8 +50,7 @@ class CfgVehicles {
         weapon = QUOTE(TBD_2B25_WEAPON);
         selection = "round_selection";
         source = "reloadMagazine";
-        //initPhase = 0;
-        animPeriod = 10;
+
     };
         };
 
