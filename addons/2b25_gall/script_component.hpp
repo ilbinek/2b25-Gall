@@ -17,3 +17,7 @@
 #define TBD_2B25_BOX_HE tbd_2b25_box_he
 #define TBD_2B25_HE tbd_2b25_shell_he
 #define TBD_2B25_82mm_SHELL_AMMO_HE tbd_2B25_82mm_shell_ammo_he
+
+#define TBD_2B25_CARRY tbd_2b25_carry
+#define TBD_2B25_TRIPOD tbd_2b25_tripod
+#define TBD_2B25_BASEPLATE tbd_2b25_baseplate

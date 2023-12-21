@@ -21,6 +21,7 @@ class CfgVehicles {
         displayName = "$STR_TBD_2B25";
         model = QPATHTOF(TBD_2B25_GALL\TBD_2B25_GALL);
         editorPreview = QPATHTOF(TBD_2B25_GALL\data\preview.paa);
+        picture = QPATHTOF(TBD_2B25_GALL\data\tbd_2b25_icon.paa);
         side = 0;
         faction = "OPF_F";
         crew = "B_Soldier_F";
@@ -36,24 +37,21 @@ class CfgVehicles {
         EPEImpulseDamageCoef = 5;
 
         class AnimationSources {
+            class RoundHideSource {
+                weapon = QUOTE(TBD_2B25_WEAPON);
+                selection = "round_selection";
+                source = "ammo";
+                type = "hide";
+                hideValue = 0;
+                unhideValue = 1;
+            };
 
-        class RoundHideSource {
-        weapon = QUOTE(TBD_2B25_WEAPON);
-        selection = "round_selection";
-        source = "ammo";
-        type = "hide";
-        hideValue = 0;
-        unhideValue = 1;
-    };
-
-        class Mamasource {
-        weapon = QUOTE(TBD_2B25_WEAPON);
-        selection = "round_selection";
-        source = "reloadMagazine";
-
-    };
+            class Mamasource {
+                weapon = QUOTE(TBD_2B25_WEAPON);
+                selection = "round_selection";
+                source = "reloadMagazine";
+            };
         };
-
 
         class Turrets : Turrets {
             class MainTurret : MainTurret {
@@ -91,7 +89,7 @@ class CfgVehicles {
                 };
                 minelev = 0;
                 maxelev = 44;
-                magazines[] = {QUOTE(TBD_2B25_HE)};
+                magazines[] = {};
                 ejectDeadGunner = 1;
                 usepip = 2;
                // turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery"; - nerealisticky mortar overlay, vypnut
@@ -160,5 +158,22 @@ class CfgVehicles {
                 };
             };
         };
+
+        class ACE_CSW {
+            enabled = 1;
+            disassembleTurret = QUOTE(TBD_2B25_BASEPLATE);
+            disassembleWeapon = QUOTE(TBD_2B25_CARRY);
+            disassembleFunc = QFUNC(handleDisassembly);
+        };
+    };
+
+    class ace_csw_baseTripod;
+    class ace_csw_mortarBaseplate: ace_csw_baseTripod {};
+
+    class TBD_2B25_BASEPLATE: ace_csw_mortarBaseplate {
+        class ACE_CSW {
+            disassembleTo = QUOTE(TBD_2B25_TRIPOD);
+        };
+        model = QPATHTOF(TBD_2B25_GALL\tbd_2b25_baseplate.p3d);
     };
 };
