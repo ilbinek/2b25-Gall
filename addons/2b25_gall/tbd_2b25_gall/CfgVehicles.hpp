@@ -21,6 +21,7 @@ class CfgVehicles {
         displayName = "$STR_TBD_2B25";
         model = QPATHTOF(TBD_2B25_GALL\TBD_2B25_GALL);
         editorPreview = QPATHTOF(TBD_2B25_GALL\data\preview.paa);
+        picture = QPATHTOF(TBD_2B25_GALL\data\tbd_2b25_icon.paa);
         side = 0;
         faction = "OPF_F";
         crew = "B_Soldier_F";
@@ -36,24 +37,21 @@ class CfgVehicles {
         EPEImpulseDamageCoef = 5;
 
         class AnimationSources {
+            class RoundHideSource {
+                weapon = QUOTE(TBD_2B25_WEAPON);
+                selection = "round_selection";
+                source = "ammo";
+                type = "hide";
+                hideValue = 0;
+                unhideValue = 1;
+            };
 
-        class RoundHideSource {
-        weapon = QUOTE(TBD_2B25_WEAPON);
-        selection = "round_selection";
-        source = "ammo";
-        type = "hide";
-        hideValue = 0;
-        unhideValue = 1;
-    };
-
-        class Mamasource {
-        weapon = QUOTE(TBD_2B25_WEAPON);
-        selection = "round_selection";
-        source = "reloadMagazine";
-
-    };
+            class Mamasource {
+                weapon = QUOTE(TBD_2B25_WEAPON);
+                selection = "round_selection";
+                source = "reloadMagazine";
+            };
         };
-
 
         class Turrets : Turrets {
             class MainTurret : MainTurret {
@@ -159,6 +157,20 @@ class CfgVehicles {
                     showDisabled = 0;
                 };
             };
+        };
+
+        class ACE_CSW {
+            enabled = 1;
+            disassembleTurret = QUOTE(TBD_2B25_BASEPLATE);
+            disassembleWeapon = QUOTE(TBD_2B25_CARRY);
+        };
+    };
+
+    class ace_csw_baseTripod;
+
+    class TBD_2B25_BASEPLATE: ace_csw_baseTripod {
+        class ACE_CSW {
+            disassembleTo = QUOTE(TBD_2B25_TRIPOD);
         };
     };
 };

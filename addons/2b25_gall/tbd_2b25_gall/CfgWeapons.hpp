@@ -7,6 +7,11 @@ class CfgWeapons {
 		class far;
 	};
 
+	class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
+
 	class mortar_82mm: CannonCore {};
 
 	class TBD_2B25_WEAPON: mortar_82mm {
@@ -65,5 +70,45 @@ class CfgWeapons {
 			maxRangeProbab=0.0099999998;
 			
 		};
+	};
+
+	class ace_csw_staticMortarCarry: Launcher_Base_F {};
+	class TBD_2B25_CARRY: ace_csw_staticMortarCarry {
+		class ACE_CSW {
+			type = "weapon";
+			deployTime = 10;
+			pickupTime = 10;
+			class assembleTo {
+				TBD_2B25_TRIPOD = QUOTE(TBD_2B25_GALL);
+			};
+		};
+
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			class MuzzleSlot {
+				iconScale = 0.1;	
+			};
+
+			mass = 444;
+		};
+
+		displayName = QUOTE(2B25 Mortar);
+        author = QUOTE(TBD Team);
+	};
+
+	class ace_csw_carryMortarBaseplate: Launcher_Base_F {};
+
+	class TBD_2B25_TRIPOD: ace_csw_carryMortarBaseplate {
+		class ADDON {
+            type = "mount";
+            deployTime = 4;
+            pickupTime = 4;
+            deploy = QUOTE(TBD_2B25_BASEPLATE);
+        };
+
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 154; // M3A1 baseblate weight
+        };
+		displayName = QUOTE(2B25 Mortar Baseplate);
+		author = QUOTE(TBD Team);
 	};
 };
