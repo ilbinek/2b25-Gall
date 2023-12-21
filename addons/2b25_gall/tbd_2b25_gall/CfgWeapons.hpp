@@ -79,7 +79,7 @@ class CfgWeapons {
 			deployTime = 10;
 			pickupTime = 10;
 			class assembleTo {
-				TBD_2B25_TRIPOD = QUOTE(TBD_2B25_GALL);
+				TBD_2B25_BASEPLATE = QUOTE(TBD_2B25_GALL);
 			};
 		};
 
@@ -98,10 +98,10 @@ class CfgWeapons {
 	class ace_csw_carryMortarBaseplate: Launcher_Base_F {};
 
 	class TBD_2B25_TRIPOD: ace_csw_carryMortarBaseplate {
-		class ADDON {
+		class ACE_CSW {
             type = "mount";
-            deployTime = 4;
-            pickupTime = 4;
+            deployTime = 2;
+            pickupTime = 2;
             deploy = QUOTE(TBD_2B25_BASEPLATE);
         };
 

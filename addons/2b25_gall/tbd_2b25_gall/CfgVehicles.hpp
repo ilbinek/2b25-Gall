@@ -89,7 +89,7 @@ class CfgVehicles {
                 };
                 minelev = 0;
                 maxelev = 44;
-                magazines[] = {QUOTE(TBD_2B25_HE)};
+                magazines[] = {};
                 ejectDeadGunner = 1;
                 usepip = 2;
                // turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery"; - nerealisticky mortar overlay, vypnut
@@ -163,14 +163,17 @@ class CfgVehicles {
             enabled = 1;
             disassembleTurret = QUOTE(TBD_2B25_BASEPLATE);
             disassembleWeapon = QUOTE(TBD_2B25_CARRY);
+            disassembleFunc = QFUNC(handleDisassembly);
         };
     };
 
     class ace_csw_baseTripod;
+    class ace_csw_mortarBaseplate: ace_csw_baseTripod {};
 
-    class TBD_2B25_BASEPLATE: ace_csw_baseTripod {
+    class TBD_2B25_BASEPLATE: ace_csw_mortarBaseplate {
         class ACE_CSW {
             disassembleTo = QUOTE(TBD_2B25_TRIPOD);
         };
+        model = QPATHTOF(TBD_2B25_GALL\tbd_2b25_baseplate.p3d);
     };
 };
