@@ -51,6 +51,11 @@ class CfgVehicles {
                 selection = "round_selection";
                 source = "reloadMagazine";
             };
+
+             class LegsSource {
+                selection = "legs";
+                source = "mainGun";
+            };
         };
 
         class Turrets : Turrets {
