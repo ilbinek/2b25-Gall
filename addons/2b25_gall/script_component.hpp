@@ -21,3 +21,6 @@
 #define TBD_2B25_CARRY tbd_2b25_carry
 #define TBD_2B25_TRIPOD tbd_2b25_tripod
 #define TBD_2B25_BASEPLATE tbd_2b25_baseplate
+
+#define TBD_2B25_SHOT_SOUNDSET tbd_2b25_shot_soundset
+#define TBD_2B25_SHOT_SOUNDSHADER tbd_2b25_shot_soundshader

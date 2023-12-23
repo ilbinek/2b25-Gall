@@ -11,5 +11,7 @@ class CfgPatches {
 };
 
 class Mode_SemiAuto;
+#include "CfgSoundShaders.hpp"
+#include "CfgSoundSets.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"

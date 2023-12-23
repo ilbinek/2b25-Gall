@@ -27,29 +27,8 @@ class CfgWeapons {
 			{
 				"StandardSound"
 			};
-			class StandardSound
-			{
-				begin1[]=
-				{
-					QPATHTOF(TBD_2B25_GALL\sounds\2B25shot.ogg),
-					1.2589254,
-					1,
-					250
-				};
-				/*begin2[]=
-				{
-					"A3\Sounds_F\arsenal\weapons_static\Mortar\mortar_02",
-					1.2589254,
-					1,
-					250
-				};*/
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
-				
-
+			class StandardSound {
+				soundSetShot[] = {QUOTE(TBD_2B25_SHOT_SOUNDSET)};
 			};
 			reloadSound[]=
 			{
