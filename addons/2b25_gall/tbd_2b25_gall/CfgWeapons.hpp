@@ -31,25 +31,25 @@ class CfgWeapons {
 			{
 				begin1[]=
 				{
-					"A3\Sounds_F\arsenal\weapons_static\Mortar\mortar_01",
+					QPATHTOF(TBD_2B25_GALL\sounds\2B25shot.ogg),
 					1.2589254,
 					1,
 					250
 				};
-				begin2[]=
+				/*begin2[]=
 				{
 					"A3\Sounds_F\arsenal\weapons_static\Mortar\mortar_02",
 					1.2589254,
 					1,
 					250
-				};
+				};*/
 				soundBegin[]=
 				{
 					"begin1",
-					0.5,
-					"begin2",
-					0.5
+					1,
 				};
+				
+
 			};
 			reloadSound[]=
 			{
