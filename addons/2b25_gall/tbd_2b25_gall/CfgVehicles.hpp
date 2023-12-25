@@ -24,7 +24,7 @@ class CfgVehicles {
         picture = QPATHTOF(TBD_2B25_GALL\data\tbd_2b25_icon.paa);
         side = 0;
         faction = "OPF_F";
-        crew = "B_Soldier_F";
+        crew = "O_Soldier_F";
 
         transportSoldier = 0;
         cargoAction[] = {"Mortar_Gunner"};
@@ -60,8 +60,8 @@ class CfgVehicles {
 
         class Turrets : Turrets {
             class MainTurret : MainTurret {
-                gunnerAction = "rhs_D30_Cargo";
-                //gunnerAction = "Mortar_Gunner";
+                //gunnerAction = "rhs_D30_Cargo";
+                gunnerAction = "Mortar_Gunner";
                 gunnergetInAction = "GetInLow";
                 gunnergetOutAction = "GetOutLow";
                 weapons[] = {QUOTE(TBD_2B25_WEAPON)};
