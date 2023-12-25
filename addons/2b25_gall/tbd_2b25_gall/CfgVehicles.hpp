@@ -60,9 +60,10 @@ class CfgVehicles {
 
         class Turrets : Turrets {
             class MainTurret : MainTurret {
-                gunnerAction = "Mortar_Gunner";
-                gunnergetInAction = "";
-                gunnergetOutAction = "";
+                gunnerAction = "rhs_D30_Cargo";
+                //gunnerAction = "Mortar_Gunner";
+                gunnergetInAction = "GetInLow";
+                gunnergetOutAction = "GetOutLow";
                 weapons[] = {QUOTE(TBD_2B25_WEAPON)};
                 elevationMode = 1;
                 initCamElev = 0;
@@ -79,6 +80,7 @@ class CfgVehicles {
                 memoryPointGunnerOptics = "eye";
                 //gunnerOpticsModel = "\A3\Weapons_F\acc\reticle_Mortar_01_F.p3d";
                 gunnerOpticsModel = QPATHTOF(TBD_2B25_GALL\scope.p3d);
+                gunnerUsesPilotView = 1;
                 disableSoundAttenuation = 1;
                 class ViewOptics : ViewOptics {
                     initAngleX = 0;
@@ -97,10 +99,13 @@ class CfgVehicles {
                 magazines[] = {};
                 ejectDeadGunner = 1;
                 usepip = 2;
-               // turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery"; - nerealisticky mortar overlay, vypnut
                 discreteDistanceInitIndex = 0;
                 primaryGunner = 1;
                 maxHorizontalRotSpeed = 1.2;
+                memoryPointsGetInGunner = "pos_gunner";
+                memoryPointsGetInGunnerDir = "pos_gunner_dir";
+                proxyType = "CPGunner";
+                proxyIndex = 1;
             };
         };
         htMin = 1;
