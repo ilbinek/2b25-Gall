@@ -60,7 +60,6 @@ class CfgVehicles {
 
         class Turrets : Turrets {
             class MainTurret : MainTurret {
-                //gunnerAction = "rhs_D30_Cargo";
                 gunnerAction = "Mortar_Gunner";
                 gunnergetInAction = "GetInLow";
                 gunnergetOutAction = "GetOutLow";
@@ -78,7 +77,6 @@ class CfgVehicles {
                 discreteDistanceCameraPoint[] = {"eye"};
                 gunnerForceOptics = 0;
                 memoryPointGunnerOptics = "eye";
-                //gunnerOpticsModel = "\A3\Weapons_F\acc\reticle_Mortar_01_F.p3d";
                 gunnerOpticsModel = QPATHTOF(TBD_2B25_GALL\scope.p3d);
                 gunnerUsesPilotView = 1;
                 disableSoundAttenuation = 1;
