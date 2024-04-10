@@ -1,16 +1,16 @@
 class CfgVehicles {
-    class All;
-    class AllVehicles : All {};
-    class Land : AllVehicles {};
-    class LandVehicle : Land {};
-    class StaticWeapon : LandVehicle {
+    class LandVehicle {
         class Turrets;
-		class MainTurret;
-    	class EventHandlers;
-		class ACE_Actions;
+        class EventHandlers;
+        class ACE_Actions;
+    };
+    class StaticWeapon : LandVehicle {
+         class Turrets: Turrets {
+            class MainTurret;
+        };
     };
     class StaticMortar : StaticWeapon {
-        class Turrets {
+        class Turrets: Turrets {
             class MainTurret: MainTurret {
                 class ViewOptics;
             };
@@ -65,8 +65,8 @@ class CfgVehicles {
             };
         };
 
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 gunnerAction = "Mortar_Gunner";
                 gunnergetInAction = "GetInLow";
                 gunnergetOutAction = "GetOutLow";
@@ -87,7 +87,7 @@ class CfgVehicles {
                 gunnerOpticsModel = QPATHTOF(TBD_2B25_GALL\scope.p3d);
                 gunnerUsesPilotView = 1;
                 disableSoundAttenuation = 1;
-                class ViewOptics : ViewOptics {
+                class ViewOptics: ViewOptics {
                     initAngleX = 0;
                     minAngleX = -30;
                     maxAngleX = 30;
@@ -128,16 +128,16 @@ class CfgVehicles {
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0, 1.2, 0};
 
-        class ACE_SelfActions {
+        /*class ACE_SelfActions {
             class ace_mk6mortar_toggleMils {
                 displayName = "Toggle MILS";
                 condition = "true";
                 statement = "_this call ace_mk6mortar_fnc_toggleMils";
                 exceptions[] = {};
             };
-        };
+        };*/
 
-        class ACE_Actions {
+        class ACE_Actions: ACE_Actions {
             class ACE_LoadRound {
                 selection = "usti hlavne";
                 distance = 2.5;
