@@ -67,6 +67,8 @@ class CfgVehicles {
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
+                gunnerRightHandAnimName = "axis_right_hand";
+                gunnerLeftHandAnimName = "axis_left_hand";
                 gunnerAction = "2B25pose";
                 gunnergetInAction = "GetInLow";
                 gunnergetOutAction = "GetOutLow";
@@ -91,11 +93,11 @@ class CfgVehicles {
                    // camPos = "gunnerview";
                    // camDir = "look2";
                     initAngleX = -70;
-                    minAngleX = -180;
-                    maxAngleX = 180;
+                    minAngleX = -360;
+                    maxAngleX = 360;
                     initAngleY = -45;
-                    minAngleY = -180;
-                    maxAngleY = 180;
+                    minAngleY = -360;
+                    maxAngleY = 360;
                     initFov = 1;
                     minFov = 1;
                     maxFov = 1;
