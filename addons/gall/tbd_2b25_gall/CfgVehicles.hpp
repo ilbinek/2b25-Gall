@@ -34,7 +34,7 @@ class CfgVehicles {
         crew = "O_Soldier_F";
 
         transportSoldier = 0;
-        cargoAction[] = {"Mortar_Gunner"};
+        cargoAction[] = {"2B25pose"};
         getInAction = "GetInMortar";
         getOutAction = "GetOutLow";
         unitInfoType = "RscUnitInfoMortar";
@@ -67,7 +67,7 @@ class CfgVehicles {
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                gunnerAction = "Mortar_Gunner";
+                gunnerAction = "2B25pose";
                 gunnergetInAction = "GetInLow";
                 gunnergetOutAction = "GetOutLow";
                 weapons[] = {QUOTE(TBD_2B25_WEAPON)};
@@ -87,6 +87,21 @@ class CfgVehicles {
                 gunnerOpticsModel = QPATHTOF(TBD_2B25_GALL\scope.p3d);
                 gunnerUsesPilotView = 1;
                 disableSoundAttenuation = 1;
+                class ViewGunner : ViewGunner {
+                   // camPos = "gunnerview";
+                   // camDir = "look2";
+                    initAngleX = -70;
+                    minAngleX = -180;
+                    maxAngleX = 180;
+                    initAngleY = -45;
+                    minAngleY = -180;
+                    maxAngleY = 180;
+                    initFov = 1;
+                    minFov = 1;
+                    maxFov = 1;
+                    visionMode[] = {"Normal"};
+                };
+
                 class ViewOptics: ViewOptics {
                     initAngleX = 0;
                     minAngleX = -30;
@@ -94,9 +109,9 @@ class CfgVehicles {
                     initAngleY = 0;
                     minAngleY = -100;
                     maxAngleY = 100;
-                    initFov = 0.174;
-                    minFov = 0.0077778;
-                    maxFov = 0.14;
+                    initFov = 0.15;
+                    minFov = 0.15;
+                    maxFov = 0.15;
                     visionMode[] = {"Normal"};
                 };
                 minelev = 0;
