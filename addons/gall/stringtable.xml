@@ -8,14 +8,18 @@
         <Key ID="STR_TBD2B25_HE_SHELL">
             <English>82mm HE-Frag shell - Gall</English>
             <Czech>82mm TŘÍSTIVÁ mina - Gall</Czech>
+            <Russian>82мм ОФ мина</Russian>
+
         </Key>
         <Key ID="STR_TBD_2B25_BOX_HE">
             <English>82mm HE-Frag box - Gall</English>
             <Czech>82mm TŘÍSTIVÉ miny - Gall</Czech>
+            <Russian>Ящик 82мм ОФ мин - 2Б25 Галл</Russian>
         </Key>
         <Key ID="STR_TBD_2B25">
             <English>2b25 Gall</English>
             <Czech>2b25 Gall</Czech>
+            <Russian>2Б25 Галл</Russian>
         </Key>
     </Package>
 </Project>
