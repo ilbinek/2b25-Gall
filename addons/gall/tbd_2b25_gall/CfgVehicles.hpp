@@ -1,7 +1,7 @@
 class CfgVehicles {
-    class LandVehicle {
+    class Land;
+    class LandVehicle: Land {
         class Turrets;
-        class ACE_Actions;
     };
     class StaticWeapon : LandVehicle {
          class Turrets: Turrets {
@@ -15,6 +15,7 @@ class CfgVehicles {
                 class ViewOptics;
             };
         };
+        class ACE_Actions;
     };
 
     class TBD_2B25_GALL: StaticMortar {
