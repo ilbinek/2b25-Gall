@@ -1,7 +1,6 @@
 class CfgVehicles {
     class LandVehicle {
         class Turrets;
-        class EventHandlers;
         class ACE_Actions;
     };
     class StaticWeapon : LandVehicle {
@@ -18,7 +17,7 @@ class CfgVehicles {
         };
     };
 
-    class TBD_2B25_GALL : StaticMortar {
+    class TBD_2B25_GALL: StaticMortar {
         artilleryScanner = 0; // turn off artillery computer
         ace_artillerytables_showRangetable = 1; // "fix" rangetables not showing up
         ace_artillerytables_showGunLaying = 1;  // "fix" rangetables not showing up
@@ -90,7 +89,7 @@ class CfgVehicles {
                 gunnerOpticsModel = QPATHTOF(TBD_2B25_GALL\scope.p3d);
                 gunnerUsesPilotView = 1;
                 disableSoundAttenuation = 1;
-                class ViewGunner : ViewGunner {
+                class ViewGunner: ViewGunner {
                    // camPos = "gunnerview";
                    // camDir = "look2";
                     initAngleX = -70;
@@ -145,15 +144,6 @@ class CfgVehicles {
         ace_dragging_carryPosition[] = {0, 1.2, 0};
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0, 1.2, 0};
-
-        /*class ACE_SelfActions {
-            class ace_mk6mortar_toggleMils {
-                displayName = "Toggle MILS";
-                condition = "true";
-                statement = "_this call ace_mk6mortar_fnc_toggleMils";
-                exceptions[] = {};
-            };
-        };*/
 
         class ACE_Actions: ACE_Actions {
             class ACE_LoadRound {
