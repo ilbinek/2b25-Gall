@@ -145,6 +145,49 @@ class CfgVehicles {
         ace_dragging_carryPosition[] = {0, 1.2, 0};
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0, 1.2, 0};
+        selectionDamage = "zbytek";
+
+        class Damage {
+            mat[] = {"x\tbd_2b25\addons\gall\tbd_2B25_gall\data\one.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\one_damage.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\one_destroy.rvmat",
+                     
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\two.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\two_damage.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\two_destroy.rvmat",
+                     
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\scope.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\scope_damage.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\scope_destroy.rvmat",
+                     
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\number.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\number_damage.rvmat",
+                     "x\tbd_2b25\addons\gall\tbd_2B25_gall\data\number_destroy.rvmat"};
+            tex[] = {};
+        };
+
+        class DestructionEffects {
+
+                class Smoke2 {
+                intensity = 1;
+                interval = 1;
+                lifetime = 5;
+                position = "konec hlavne";
+                simulation = "particles" ;
+                type = "WeaponWreckSmoke";};
+
+                class Smoke {
+                intensity = 1;
+                interval = 1;
+                lifetime = 5;
+                position = "usti hlavne";
+                simulation = "particles" ;
+                type = "WeaponWreckSmoke";};
+
+
+
+                };
+
 
         class ACE_Actions: ACE_Actions {
             class ACE_LoadRound {
