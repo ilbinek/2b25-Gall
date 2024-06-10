@@ -67,7 +67,7 @@ class CfgWeapons {
 				iconScale = 0.1;	
 			};
 
-			mass = 444;
+			mass = 260;
 		};
 
 		displayName = QUOTE(2B25 Mortar);
@@ -85,7 +85,7 @@ class CfgWeapons {
         };
 
 		class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 154; // M3A1 baseblate weight
+            mass = 77; // M3A1 baseblate weight
         };
 		displayName = QUOTE(2B25 Mortar Baseplate);
 		author = QUOTE(TBD Team);
