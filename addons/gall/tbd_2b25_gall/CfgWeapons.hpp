@@ -1,11 +1,5 @@
 class CfgWeapons {
-	class CannonCore {
-		class player;
-		class close;
-		class short;
-		class medium;
-		class far;
-	};
+	class CannonCore;
 
 	class Launcher;
     class Launcher_Base_F: Launcher {

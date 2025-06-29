@@ -1,21 +1,28 @@
-class CfgVehicles {
-    class Land;
-    class LandVehicle: Land {
-        class Turrets;
-    };
-    class StaticWeapon : LandVehicle {
-         class Turrets: Turrets {
-            class MainTurret;
-        };
-    };
-    class StaticMortar : StaticWeapon {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                class ViewGunner;
+class CfgVehicles
+{
+	class All;
+	class Strategic;
+	class Land;
+	class LandVehicle: Land
+	{
+		class ViewPilot;
+		class NewTurret;
+	};
+	class StaticWeapon: LandVehicle {
+
+        class ACE_Actions;
+        class Turrets {
+            class MainTurret: NewTurret {
                 class ViewOptics;
             };
         };
-        class ACE_Actions;
+    };
+
+    class StaticMortar : StaticWeapon {
+
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
     };
 
     class TBD_2B25_GALL: StaticMortar {
@@ -131,6 +138,8 @@ class CfgVehicles {
                 proxyIndex = 1;
             };
         };
+
+        
         htMin = 1;
         htMax = 480;
         afMax = 0;
